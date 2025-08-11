@@ -2,8 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Home</title>
+    <style>
+    .navbar {
+            background: #000;
+            color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+    }
+    .navbar li {
+        display: inline;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    </style>
 </head>
 <body>
+    <div class="navbar">
+        <ul>
+            <li><a th:href="@{/}">HOME</a></li>
+            <li><a th:href="@{/products}">PRODUCTS</a></li>
+            <li><a href="#">CONTACTS</a></li>
+        </ul>
+    </div>
     <h1 th:text="${message}">Welcome to eShop Home!</h1>
 </body>
 </html>
